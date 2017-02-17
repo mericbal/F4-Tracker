@@ -1,4 +1,4 @@
-User.create(username: 'aa', email: 'aa', password: 'aaa')
+# User.create(username: 'aa', email: 'aa', password: 'aaa')
 
 settlements = [
 	"Abernathy Farm",
