@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 		@user = User.find_by(email: params[:email])
 		if @user && @user.authenticate(params[:password])
 			login(@user)
-			redirect_to '/'
+			redirect_to @user
 		else
 			@error = "login failed !"
 			render :new

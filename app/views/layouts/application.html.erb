@@ -11,14 +11,12 @@
 <!-- menubar -->
 
 	<div id="menubar">
-    <% if current_user %>
       <%= link_to 'home', '/' %>
-      <%= link_to 'logout', '/logout' %>
       <%= link_to 'settlements', settlements_path %>
       <%= link_to 'items', '#' %>
+    <% if current_user %>
+      <%= link_to 'logout', '/logout' %>
       <% else %>
-      <%= link_to 'home', '/' %>
-      <%= link_to 'settlements', settlements_path %>
       <%= link_to 'sign up', new_user_path %>
       <%= link_to 'login', login_path %>
     <% end %>
