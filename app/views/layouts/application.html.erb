@@ -11,20 +11,22 @@
 <!-- menubar -->
 
 	<div id="menubar">
-      <%= link_to 'home', '/' %>
-      <%= link_to 'settlements', settlements_path %>
-      <%= link_to 'items', '#' %>
+    <ul class="menubar">
+      <li> <%= link_to 'home', '/', class: 'left-links' %> </li>
+      <li> <%= link_to 'settlements', settlements_path, class: 'left-links' %> </li>
+      <li> <%= link_to 'items', '#', class: 'left-links' %> </li>
     <% if current_user %>
-      <%= link_to 'logout', '/logout' %>
+      <li> <%= link_to 'logout', '/logout', class: 'right-links' %> </li>
       <% else %>
-      <%= link_to 'sign up', new_user_path %>
-      <%= link_to 'login', login_path %>
+      <li> <%= link_to 'sign up', new_user_path, class: 'right-links' %> </li>
+      <li> <%= link_to 'login', login_path, class: 'right-links' %> </li>
     <% end %>
-  </div>
+
+    </ul> <!-- ul menubar  -->
+  </div>  <!-- div menubar -->
 
 
-
-  <body>
+  <body id="main-body">
     <%= yield %>
   </body>
 </html>
