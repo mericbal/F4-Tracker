@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+#menubar {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	/*border-bottom: 1px solid black;*/
+}
+
+
+#main-body {
+	background-color: gray;
+	padding-top: 50px;
+	text-align: center;
+}
+
+
+ul.menubar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+}
+
+.right-links {
+	float: right;
+}
+.left-links {
+	float: left;
+}
+
+li a:hover, .dropmenu:hover .dropbutton .right-links .left-links{
+	background-color: darkred;
+}
+
+li a.right-links, a.left-links, .dropbutton, .t-button {
+	display: inline-block;
+	color: gray;
+	text-align: center;
+	padding: 14px 23px;
+	text-decoration: none;
+}
